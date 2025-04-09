@@ -1,5 +1,5 @@
 {
-  "name": "@kint/bruno_shared_scripts",
+  "name": "@k-int/bruno_shared_scripts",
   "version": "1.0.0",
   "exports": "./es/index.js",
   "main": "src/index.js",
@@ -8,9 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild ./src/index.js --bundle --format=cjs --outdir=es --external:axios"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "esbuild": "0.23.0"
+    "esbuild": "^0.25.2"
   }
 }
