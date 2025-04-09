@@ -17,8 +17,8 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.js
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   getBaseUrl: () => getBaseUrl,
   getCreds: () => getCreds,
   getIgnoreCreds: () => getIgnoreCreds,
@@ -30,7 +30,7 @@ __export(src_exports, {
   loginWithExpiry: () => loginWithExpiry,
   setBaseUrl: () => setBaseUrl
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 
 // src/utils/baseUrl.js
 var okapiProtocol = bru.getEnvVar("okapiProtocol");
