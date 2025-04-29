@@ -206,7 +206,6 @@ init_utils();
 init_auth();
 
 // src/folioRequest.js
-init_auth();
 var { doALogin: doALogin2 } = (init_auth(), __toCommonJS(auth_exports));
 var axios2 = require("axios");
 var { getBaseRequestConfig: getBaseRequestConfig2 } = (init_utils(), __toCommonJS(utils_exports));
