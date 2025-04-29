@@ -103,9 +103,7 @@ var init_login = __esm({
           url,
           creds,
           config
-        ).catch((err) => {
-          console.error("Failed to login to FOLIO: %o", err);
-        });
+        );
       }
     };
     loginFunc = async ({
@@ -122,6 +120,8 @@ var init_login = __esm({
         if (!withExpiry) {
           req.setHeader("x-okapi-token", getToken());
         }
+      }).catch((err) => {
+        console.error("Failed to login to folio: %o", err);
       });
     };
     login = (urlOverride) => loginFunc({ urlOverride, withExpiry: false });
@@ -222,5 +222,7 @@ var getFolioAxios = async ({
     }
     !suppressConsole && console.log("folioRequest ready with config: %o", config);
     return axios2.create(config);
+  }).catch((err) => {
+    console.error("Failed to login to folio: %o", err);
   });
 };

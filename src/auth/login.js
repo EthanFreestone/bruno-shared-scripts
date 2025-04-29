@@ -48,9 +48,6 @@ const doALogin = async ({
       creds,
       config
     )
-    .catch(err => {
-      console.error("Failed to login to FOLIO: %o", err);
-    });
   }
 }
 
@@ -73,6 +70,9 @@ const loginFunc = async ({
         // This is only populated on login, not login with expiry
         req.setHeader('x-okapi-token', getToken())
       }
+    })
+    .catch(err => {
+      console.error("Failed to login to folio: %o", err)
     });
 }
 

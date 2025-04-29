@@ -20,5 +20,7 @@ export const getFolioAxios = async ({
 
     !suppressConsole && console.log("folioRequest ready with config: %o", config);
     return axios.create(config);
+  }).catch(err => {
+    console.error("Failed to login to folio: %o", err)
   })
 }
